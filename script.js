@@ -4,7 +4,7 @@ const btn = document.querySelector('input[type=submit]');
 const warn = document.querySelector('.warning');
 const blueBtn = document.getElementById('blue');
 const randomBtn = document.getElementById('random');
-const gradiantBtn = document.getElementById('gradiant');
+const gradientBtn = document.getElementById('gradient');
 const resetBtn = document.getElementById('reset');
 
 function makeGrid(rows, columns) {
@@ -56,24 +56,24 @@ function makeRandom() {
 
 randomBtn.addEventListener('click', makeRandom);
 
-function makeGradiant() {
+function makeGradient() {
   const cells = document.querySelectorAll('.cell');
-  let gradiant = 0;
+  let gradient = 0;
   let count = 1;
   for (let i = 0; i < cells.length; i++) {
     cells[i].addEventListener('mouseover', function(e) {
-      e.target.style.backgroundColor = `rgba(0, 0, 0, ${gradiant})`;
+      e.target.style.backgroundColor = `rgba(0, 0, 0, ${gradient})`;
       if (Math.ceil(count / 25) % 2 !== 0) {
-        gradiant += 0.05;
+        gradient += 0.05;
       } else {
-        gradiant -= 0.05;
+        gradient -= 0.05;
       }
       count += 1;
     })
   }
 }
 
-gradiantBtn.addEventListener('click', makeGradiant);
+gradientBtn.addEventListener('click', makeGradient);
 
 function reset() {
   const gridItems = document.querySelectorAll('.cell');
