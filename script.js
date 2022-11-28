@@ -35,7 +35,7 @@ function makeBlue() {
   const cells = document.querySelectorAll('.cell');
   for (let i = 0; i < cells.length; i++) {
     cells[i].addEventListener('mouseover', function(e) {
-      e.target.style.backgroundColor = 'blue';
+      e.target.style.backgroundColor = 'lightskyblue';
     })
   }
 }

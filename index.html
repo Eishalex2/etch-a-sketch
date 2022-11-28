@@ -8,24 +8,34 @@
   <title>Etch-A-Sketch</title>
 </head>
 <body>
-  <form onsubmit="return false">
-    <label for="grid size">Enter a grid size, number between 1 and
-    100.</label>
-    <input type="number" required min="1" max="100">
-    <input type="submit" value="Submit">
-  </form>
-  <p class="warning"></p>
+  <header class="title">Etch-A-Sketch</header>
 
-  <p class="instructions">Click a button for what color you want, and
-  then hover your mouse over the grid!</p>
-  <button type="button" id="blue">Blue</button>
-  <button type="button" id="random">Random Color</button>
-  <button type="button" id="gradient">Shades of Gray</button>
+  <div class="body-container">
+    <div class="left">
+      <div class="size-container">
+        <h3 class="size">Change the grid size</h3>
+        <form onsubmit="return false">
+          <label for="grid size">Enter a grid size, number between 1 and
+          100.</label>
+          <input type="number" required min="1" max="100">
+          <input type="submit" value="Submit">
+        </form>
+        <p class="warning"></p>
+      </div>
 
-  <button type="button" id="reset">Reset Colors</button>
+      <div class="color-container">
+        <h3 class="color">Change the fill color</h3>
+        <p class="instructions">Click a button for what color you want, and
+        then hover your mouse over the grid!</p>
+        <button type="button" id="blue">Blue</button>
+        <button type="button" id="random">Random Color</button>
+        <button type="button" id="gradient">Shades of Gray</button>
+        <button type="button" id="reset">Reset Colors</button>
+      </div>
+    </div>
 
-  <div class="flex-container">
-    <div id="container"> 
+    <div class="flex-container">
+      <div id="container"></div>
     </div>
   </div>
   
